@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.demo</groupId>
+  <artifactId>org.demo.application</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+      <groupId>org.demo</groupId>
+      <artifactId>org.demo.api</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi.enroute</groupId>
+      <artifactId>osgi-api</artifactId>
+      <version>7.0.0</version>
+      <type>pom</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.felix</groupId>
+      <artifactId>org.apache.felix.gogo.runtime</artifactId>
+      <version>1.1.2</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>OSGi</id>
+      <name>OSGi public binaries</name>
+      <url>https://oss.sonatype.org/content/repositories/osgi-releases/</url>
+    </repository>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>OSGi Snapshots</id>
+      <name>OSGi public snapshot binaries</name>
+      <url>https://oss.sonatype.org/content/repositories/osgi-snapshots/</url>
+    </repository>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>Apache Snapshots</id>
+      <url>https://repository.apache.org/content/groups/snapshots/</url>
+    </repository>
+  </repositories>
+</project>

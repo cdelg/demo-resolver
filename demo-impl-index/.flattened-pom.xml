@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.demo</groupId>
+  <artifactId>demo-impl-index</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <properties>
+    <plugin.enroute.version>7.0.0</plugin.enroute.version>
+    <revision>0.1.0-SNAPSHOT</revision>
+    <plugin.bnd.version>4.4.0-SNAPSHOT</plugin.bnd.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.demo</groupId>
+        <artifactId>org.demo.api</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.demo</groupId>
+        <artifactId>org.demo.provider</artifactId>
+        <version>${project.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>OSGi</id>
+      <name>OSGi public binaries</name>
+      <url>https://oss.sonatype.org/content/repositories/osgi-releases/</url>
+    </repository>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>OSGi Snapshots</id>
+      <name>OSGi public snapshot binaries</name>
+      <url>https://oss.sonatype.org/content/repositories/osgi-snapshots/</url>
+    </repository>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>Apache Snapshots</id>
+      <url>https://repository.apache.org/content/groups/snapshots/</url>
+    </repository>
+  </repositories>
+</project>
