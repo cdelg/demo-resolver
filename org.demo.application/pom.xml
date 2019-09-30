@@ -71,12 +71,13 @@
 
 				<executions>
 					<execution>
-<!-- 					uncomment the line bellow, the provider bundle should show up  -->
+						<!-- uncomment the line bellow, the provider bundle should show up  -->
 <!-- 						<phase>package</phase> -->
 						<goals>
 							<goal>resolve</goal>
 						</goals>
 						<configuration>
+							<includeDependencyManagement>true</includeDependencyManagement>
 							<bndruns>
 								<bndrun>org.demo.application.bndrun</bndrun>
 							</bndruns>
